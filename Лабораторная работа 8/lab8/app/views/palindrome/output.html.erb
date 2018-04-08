@@ -1,0 +1,29 @@
+<h1>Palindrome#output</h1>
+<p>Результат</p>
+
+<p id="result">
+  <% if @result.nil? %>
+    <%= 'Timeout error' %>
+  <% else %>
+    <%= @result %>
+  <% end %>
+</p>
+<p>Решение</p>
+<p id="solve"></p>
+<table border = "1">
+  <tr>
+    <th>Кол-во итераций</th>
+    <th>Число на данном этапе</th>
+    <th>Палиндром?</th>
+  </tr>
+  <% @solve.each do |row| %>
+    <tr>
+    <% row.each do |value| %>
+      <td>
+      <%= value %>
+      </td>
+    <% end %>
+    </tr>
+  <% end %>
+<table>
+<%= link_to "Найти палиндром для другого числа", :palindrome_input %>

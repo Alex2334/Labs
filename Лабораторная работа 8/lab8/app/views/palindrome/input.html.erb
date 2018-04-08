@@ -1,0 +1,8 @@
+<h1>Palindrome#input</h1>
+<p>Введите натуральное число</p>
+<%= form_tag("/palindrome/output", :method => "get") do %>
+<%= label_tag("Число:") %>
+<%= text_field_tag(:val) %> <br/>
+<br/>
+<%= submit_tag("Найти палиндром") %>
+<% end %>
